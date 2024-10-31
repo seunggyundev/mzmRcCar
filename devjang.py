@@ -63,8 +63,9 @@ def running():
 
                 steerValue = int(values[0].strip())  # 첫 번째 값은 스티어링
                 throttleValue = int(values[1].strip())  # 두 번째 값은 스로틀
+                controllerValue = int(values[2].strip())  # 컨트롤러 값, 1200 이하면 자동모드
 
-                print(f"steer: {steerValue}, throttle: {throttleValue}")
+                print(f"controllerValue: {controllerValue}, steer: {steerValue}, throttle: {throttleValue}")
 
                 currentSteerValue = pca.channels[3].duty_cycle
                 targetSteerValue = mappingData(steerValue)
